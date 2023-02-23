@@ -78,3 +78,4 @@ After compiling the code run this `./shell`
 
 ## Authors
  Birhan Abuhay Jemere
+ Nneoma Obidegwu
