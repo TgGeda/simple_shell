@@ -77,5 +77,4 @@ After compiling the code run this `./shell`
 * Output: prompt to terminal: `$ `
 
 ## Authors
-* Helen Teka - https://github.com/93Helu
-* Habtamu Wolde - https://github.com/Habtwolde
+ Birhan Abuhay Jemere
