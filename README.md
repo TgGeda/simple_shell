@@ -1,81 +1,95 @@
-# simple_shell
-**0x16. C - Simple Shell - group project at Alx - shellscripting - c_programming**
+<h1 align="center">
+  0x16. C - Simple Shell
+</h1>
 
-**simple shell:-** 
+<p align="center">
+   📄 🚀
+</p>
 
-This project is about building a simple command line prompt that takes the most basics of commands that are present in the bash shell and runs them. the program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
+<p align="center">
+  <strong>
+   Description
+  </strong>
+</p>
 
-The shell will work after being compiled using ** gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh**
+<p align="center">
+This project is an implementation of the shell created as a Milestone Project for the C code at ALX Africa Software Engineering. </br>
+The gates of shell is a project in the first trimester, that helps student to understand the advanced
+concepts behind the shell program include process, system call, bit manipulation, file managment, error handling ... </br>
+Shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). </br>
+This program was written entirely in C Language.
+</p>
 
-#### HOME
-The home directory of the current user and the default directory argument for the **cd** builtin command.
+## COPYRIGHT
+Copyright (C) 2022 by zaachee ishimwe and Uwumukiza Laetitia</br>
+All rights reserved
 
-#### PWD
-The current working directory as set by the **cd** command.
+ ## Description :
+This is a shell written in [C](https://en.wikipedia.org/wiki/C_(programming_language)).
+It is based on [the Thompson Shell](https://en.wikipedia.org/wiki/Thompson_shell).
+
+## Environment :
+
+Our shell was built and tested on  Ubuntu 14.04 LTS.
+
+## Features
+* Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+* If an executable cannot be found, print an error message and display the prompt again.
+* Handle errors.
+* Hndling the “end of file” condition (Ctrl+D)
+* Hanling the command line with arguments
+* Handle the PATH
+* Support the exit features and the exit status
+* Handle the Ctrl-C to not terminate the shell
+* Handling the command seperator `;`
+* Handling `&&` and `||` logical operators
+* Handle variable replacements `$?` and `$$`
+* Handle the comments `#`
+* Support the history feature
+* Support the file input
+
+## Builtins
+Our shell has support for the following built-in commands:
+
+| Command             | Definition                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------- |
+| exit [n]            | Exit the shell, with an optional exit status, n.                                          |
+| env                 | Print the environment.                                                                    |
+| setenv [var][value] | Set an environment variable and value. If the variable exists, the value will be updated. |
+| alias[name[='value]]| Reads aliases name                                                                        |
+| unsetenv [var]      | Remove an environment variable.                                                           |
+| cd [dir]            | Change the directory.                                                                     |
+| help [built-in]     | Read documentation for a built-in.                                                        |
 
 
-#### OLDPWD
-The previous working directory as set by the **cd** command.
+ ## Installation : Getting HSH
+ 
+Clone the below repository and compile the files into an executable using the GCC compiler.
+```
+https://github.com/StellahMbao/simple_shell.git
+```
 
-#### PATH
-A colon-separated list of directories in which the shell looks for commands. A null directory name in the path (represented by any of two adjacent colons, an initial colon, or a trailing colon) indicates the current directory.
-
-#### $ENV_VARIABLE
-`ENV_VARIABLE` is substituted with its value.
-
-#### $?
-`?` is substitued with the return value of the last program executed.
-
-#### $$
-The second `$` is substitued with the current process ID.
-
-#### ; - Command separator
-Commands separated by a `;` are executed sequentially.
-
-#### && - AND logical operator
-`command1 && command2`: `command2` is executed if, and only if, `command1` returns an exit status of zero.
-
-#### || - OR logical operator
-`command1 || command2`: `command2` is executed if, and only if, `command1` returns a non-zero exit status.
-
-The operators `&&` and `||` have equal precedence, followed by `;`.
+### Basic usage :bulb:
+- First, Fork this Repository [Learn how to fork repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
+- Then Clone [Learn how to clone ](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+- Create an executable by running the following command:
+- `gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
+- From there, type in the following command and press your enter button.
+- `./hsh`
+- Final step: ENJOY!
 
 
-## Builtin Commands
+## Example :computer:
+```
+ls -la
+```
+![114757753-e50c2180-9d64-11eb-95ea-fb9bba776c8c](https://user-images.githubusercontent.com/57016982/186711943-65abad4d-eedf-4d65-947d-3710e189bdee.png)
 
-#### cd
-  * Usage: `cd [DIRECTORY]`
-  * Changes the current directory of the process to `DIRECTORY`.
-  * If no argument is given, the command is interpreted as `cd $HOME`.
-  * If the argument `-` is given, the command is interpreted as `cd $OLDPWD` and the pathname of the new working directory is printed to standad output.
-  * If the argument, `--` is given, the command is interpreted as `cd $OLDPWD` but the pathname of the new working directory is not printed.
-  * The environment variables `PWD` and `OLDPWD` are updated after a change of directory.
+## Contributors :
+* Zachee ishimwe
+* Uwumukiza Laetitia
 
-#### exit
-  * Usage: `exit [STATUS]`
-  * Exits the shell.
-  * The `STATUS` argument is the integer used to exit the shell.
-  * If no argument is given, the command is interpreted as `exit 0`.
-
-#### env
-  * Usage: `env`
-  * Prints the current environment.
-
-#### setenv
-  * Usage: `setenv [VARIABLE] [VALUE]`
-  * Initializes a new environment variable, or modifies an existing one.
-  * Upon failure, prints a message to `stderr`.
-
-## unsetenv
-  * Usage: `unsetenv [VARIABLE]`
-  * Removes an environmental variable.
-  * Upon failure, prints a message to `stderr`.
-
-## Launching the shell
-After compiling the code run this `./shell`
-
-* Output: prompt to terminal: `$ `
-
-## Authors
- Birhan Abuhay Jemere
- Nneoma Obidegwu
+## Acknowledgments :
+- The creators of the C language.
+- Our software engineer-in-residence.
+- Betty IHolberton | Alx-Africa .
